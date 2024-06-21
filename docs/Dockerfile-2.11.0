@@ -1,0 +1,8 @@
+FROM opensearchproject/opensearch:2.11.0
+
+ENV discovery.type="single-node" \
+    plugins.security.disabled="true" 
+
+EXPOSE 9200 9600
+
+CMD ["opensearch"]
